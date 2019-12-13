@@ -20,11 +20,11 @@ class Application(tornado.web.Application):
 
 class MainHandler(tornado.web.RequestHandler):
     def get(self):
-        data = {'data': list(self.application.db.matches.find({}, {'_id': False}))}
-        self.write(data)
+        print(self.request.arguments)
+        self.write('<div class="auth_done">Done</div>')
 
 
 if __name__ == "__main__":
     app = Application()
-    app.listen(8888)
+    app.listen(3000)
     tornado.ioloop.IOLoop.current().start()

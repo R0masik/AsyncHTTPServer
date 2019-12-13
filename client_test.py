@@ -3,6 +3,6 @@
 import requests
 
 if __name__ == "__main__":
-    host = 'http://127.0.0.1:8888/'
+    host = 'http://localhost:3000'
     resp = requests.get(host)
     print(resp.json())
